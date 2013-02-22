@@ -1,0 +1,24 @@
+﻿Построение начато 27.09.2012 20:55:49.
+     1>Проект "D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_1\нов\нов.vcxproj" в узле 2 (целевые объекты build).
+     1>InitializeBuildStatus:
+         Создание "Debug\нов.unsuccessfulbuild", так как было задано "AlwaysCreate".
+       ClCompile:
+         d:\Универ\Прога\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "Задача_7"
+         Задача_7
+     1>d:\users\boss\documents\visual studio 2010\projects\дз №1\задача_1\нов\задача_7(8): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\универ\прога\vc\include\stdio.h(304): см. объявление "scanf"
+     1>d:\users\boss\documents\visual studio 2010\projects\дз №1\задача_1\нов\задача_7(10): warning C4018: <: несоответствие типов со знаком и без знака
+       Link:
+         d:\Универ\Прога\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_1\Debug\нов.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\нов.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_1\Debug\нов.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_1\Debug\нов.lib" /MACHINE:X86 "Debug\Задача_7.obj"
+         LINK : не найден или не выполнена сборка D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_1\Debug\нов.exe при последней инкрементной компоновке; выполняется полная компоновка
+         нов.vcxproj -> D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_1\Debug\нов.exe
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_1\Debug\нов.exe;#1" /manifest "Debug\нов.exe.intermediate.manifest"
+       FinalizeBuildStatus:
+         Файл "Debug\нов.unsuccessfulbuild" удаляется.
+         Обращение к "Debug\нов.lastbuildstate".
+     1>Построение проекта "D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_1\нов\нов.vcxproj" завершено (целевые объекты build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:00.40

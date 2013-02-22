@@ -1,0 +1,17 @@
+﻿Построение начато 27.09.2012 20:20:11.
+     1>Проект "D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_3\Задача_3\Задача_3.vcxproj" в узле 2 (целевые объекты build).
+     1>InitializeBuildStatus:
+         Создание "Debug\Задача_3.unsuccessfulbuild", так как было задано "AlwaysCreate".
+       ClCompile:
+         Для всех выходных данных обновления не требуется.
+       Link:
+         Для всех выходных данных обновления не требуется.
+         Задача_3.vcxproj -> D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_3\Debug\Задача_3.exe
+       FinalizeBuildStatus:
+         Файл "Debug\Задача_3.unsuccessfulbuild" удаляется.
+         Обращение к "Debug\Задача_3.lastbuildstate".
+     1>Построение проекта "D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_3\Задача_3\Задача_3.vcxproj" завершено (целевые объекты build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:00.04

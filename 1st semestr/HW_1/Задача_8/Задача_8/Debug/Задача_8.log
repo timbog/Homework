@@ -1,0 +1,23 @@
+﻿Построение начато 23.09.2012 20:24:02.
+     1>Проект "D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_8\Задача_8\Задача_8.vcxproj" в узле 2 (целевые объекты build).
+     1>InitializeBuildStatus:
+         Создание "Debug\Задача_8.unsuccessfulbuild", так как было задано "AlwaysCreate".
+       ClCompile:
+         d:\Универ\Прога\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "Задача_10.cpp"
+         Задача_10.cpp
+     1>d:\users\boss\documents\visual studio 2010\projects\дз №1\задача_8\задача_8\задача_10.cpp(10): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\универ\прога\vc\include\stdio.h(304): см. объявление "scanf"
+       Link:
+         d:\Универ\Прога\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_8\Debug\Задача_8.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Задача_8.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_8\Debug\Задача_8.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_8\Debug\Задача_8.lib" /MACHINE:X86 "Debug\Задача_10.obj"
+         LINK : не найден или не выполнена сборка D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_8\Debug\Задача_8.exe при последней инкрементной компоновке; выполняется полная компоновка
+         Задача_8.vcxproj -> D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_8\Debug\Задача_8.exe
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_8\Debug\Задача_8.exe;#1" /manifest "Debug\Задача_8.exe.intermediate.manifest"
+       FinalizeBuildStatus:
+         Файл "Debug\Задача_8.unsuccessfulbuild" удаляется.
+         Обращение к "Debug\Задача_8.lastbuildstate".
+     1>Построение проекта "D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_8\Задача_8\Задача_8.vcxproj" завершено (целевые объекты build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:00.62

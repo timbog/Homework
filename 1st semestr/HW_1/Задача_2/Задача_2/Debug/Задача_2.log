@@ -1,0 +1,26 @@
+﻿Построение начато 29.09.2012 18:52:03.
+     1>Проект "D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_2\Задача_2\Задача_2.vcxproj" в узле 2 (целевые объекты build).
+     1>InitializeBuildStatus:
+         Создание "Debug\Задача_2.unsuccessfulbuild", так как было задано "AlwaysCreate".
+       GenerateTargetFrameworkMonikerAttribute:
+       Целевой объект "GenerateTargetFrameworkMonikerAttribute" пропускается, так как все выходные файлы актуальны по отношению к входным.
+       ClCompile:
+         d:\Универ\Прога\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /analyze- /errorReport:prompt "Задача_4.cpp" /clr:nostdlib 
+         Задача_4.cpp
+     1>Задача_4.cpp(9): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 d:\Универ\Прога\VC\include\conio.h(128): см. объявление "getch"
+         Для всех выходных данных обновления не требуется.
+       Link:
+         d:\Универ\Прога\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_2\Debug\Задача_2.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\Задача_2.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_2\Debug\Задача_2.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 "Debug\Задача_4.obj"
+         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+         Задача_2.vcxproj -> D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_2\Debug\Задача_2.exe
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_2\Debug\Задача_2.exe;#1" /manifest "Debug\Задача_2.exe.intermediate.manifest"
+       FinalizeBuildStatus:
+         Файл "Debug\Задача_2.unsuccessfulbuild" удаляется.
+         Обращение к "Debug\Задача_2.lastbuildstate".
+     1>Построение проекта "D:\Users\Boss\Documents\Visual Studio 2010\Projects\ДЗ №1\Задача_2\Задача_2\Задача_2.vcxproj" завершено (целевые объекты build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:00.64
