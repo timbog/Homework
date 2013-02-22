@@ -1,0 +1,9 @@
+d:\users\boss\documents\visual studio 2012\Projects\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe.config
+d:\users\boss\documents\visual studio 2012\Projects\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe
+d:\users\boss\documents\visual studio 2012\Projects\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.pdb
+d:\users\boss\documents\visual studio 2012\Projects\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.csprojResolveAssemblyReference.cache
+d:\users\boss\documents\visual studio 2012\Projects\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.exe
+d:\users\boss\documents\visual studio 2012\Projects\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.pdb
+D:\Users\Boss\Documents\Visual Studio 2012\Projects\Spiral\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe.config
+D:\Users\Boss\Documents\Visual Studio 2012\Projects\Spiral\ConsoleApplication4\obj\Debug\ConsoleApplication4.exe
+D:\Users\Boss\Documents\Visual Studio 2012\Projects\Spiral\ConsoleApplication4\obj\Debug\ConsoleApplication4.pdb

@@ -1,0 +1,12 @@
+d:\users\boss\documents\visual studio 2012\Projects\ConsoleApplication5\ConsoleApplication5\bin\Debug\ConsoleApplication5.exe.config
+d:\users\boss\documents\visual studio 2012\Projects\ConsoleApplication5\ConsoleApplication5\bin\Debug\ConsoleApplication5.exe
+d:\users\boss\documents\visual studio 2012\Projects\ConsoleApplication5\ConsoleApplication5\bin\Debug\ConsoleApplication5.pdb
+d:\users\boss\documents\visual studio 2012\Projects\ConsoleApplication5\ConsoleApplication5\obj\Debug\ConsoleApplication5.csprojResolveAssemblyReference.cache
+d:\users\boss\documents\visual studio 2012\Projects\ConsoleApplication5\ConsoleApplication5\obj\Debug\ConsoleApplication5.exe
+d:\users\boss\documents\visual studio 2012\Projects\ConsoleApplication5\ConsoleApplication5\obj\Debug\ConsoleApplication5.pdb
+D:\Users\Boss\Documents\Visual Studio 2012\Projects\MatrixSort\ConsoleApplication5\bin\Debug\ConsoleApplication5.exe.config
+D:\Users\Boss\Documents\Visual Studio 2012\Projects\MatrixSort\ConsoleApplication5\obj\Debug\ConsoleApplication5.exe
+D:\Users\Boss\Documents\Visual Studio 2012\Projects\MatrixSort\ConsoleApplication5\obj\Debug\ConsoleApplication5.pdb
+D:\Users\Boss\Documents\Visual Studio 2012\Projects\MatrixSort\ConsoleApplication5\bin\Debug\ConsoleApplication5.exe
+D:\Users\Boss\Documents\Visual Studio 2012\Projects\MatrixSort\ConsoleApplication5\bin\Debug\ConsoleApplication5.pdb
+D:\Users\Boss\Documents\Visual Studio 2012\Projects\MatrixSort\ConsoleApplication5\obj\Debug\ConsoleApplication5.csprojResolveAssemblyReference.cache
