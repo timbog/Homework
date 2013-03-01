@@ -34,7 +34,14 @@ namespace ConsoleApplication1
         public int Top()
         {
                 return value[high];
-        }    
+        }
+
+        public void Print()
+        {
+            for (int i = 0; i < size; ++i)
+            {
+                Console.WriteLine(value[i]);
+        } 
 }
 
     class Program
