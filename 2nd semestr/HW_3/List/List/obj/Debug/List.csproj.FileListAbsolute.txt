@@ -1,6 +1,0 @@
-D:\Users\Boss\Documents\GitHub\Homework\2nd semestr\HW_3\List\List\bin\Debug\List.exe.config
-D:\Users\Boss\Documents\GitHub\Homework\2nd semestr\HW_3\List\List\bin\Debug\List.exe
-D:\Users\Boss\Documents\GitHub\Homework\2nd semestr\HW_3\List\List\bin\Debug\List.pdb
-D:\Users\Boss\Documents\GitHub\Homework\2nd semestr\HW_3\List\List\obj\Debug\List.csprojResolveAssemblyReference.cache
-D:\Users\Boss\Documents\GitHub\Homework\2nd semestr\HW_3\List\List\obj\Debug\List.exe
-D:\Users\Boss\Documents\GitHub\Homework\2nd semestr\HW_3\List\List\obj\Debug\List.pdb
