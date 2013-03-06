@@ -83,7 +83,7 @@ namespace HashTable
             while (i != null)
             {
                 if (i.data == word)
-                    return iter;
+                    return iter + 1;
                 i = i.next;
                 ++iter;
             }
@@ -91,10 +91,22 @@ namespace HashTable
         }
     }
 
-    class HashTable : List
+    class HashTable
     {
-        private List[] data;
         private int size;
+
+        private List[] data;
+
+        public HashTable(int s)
+        {
+            this.size = s;
+            data = new List[s];
+            for (int i = 0; i < s; ++i)
+            {
+                data[i] = new List();
+                data[i].head = null;
+            }
+        }
 
         public int hash(string str, int max)
         {
@@ -102,27 +114,18 @@ namespace HashTable
             int i = 0;
             while (i < str.Length)
             {
-                
-                result = str[i];
+
+                result = result + str[i];
                 ++i;
             }
             return result % max;
         }
 
-        public void createHashTable(int amount)
-        {
-	        List[] arrayList = new List[amount];
-	        this.data = arrayList;
-	        this.size = amount;
-        }
-
         public void addToTable(string str)
         {
             int index = hash(str, this.size);
-
             if (this.data[index].exist(str) == -1)
             {
-                Console.WriteLine("dgffg");
                 this.data[index].add(str, 1);
             }
             else
@@ -136,6 +139,12 @@ namespace HashTable
                 }
                 ++i.num;
             }
+        }
+
+        public void printHt()
+        {
+            for (int i = 0; i < this.size; ++i)
+                this.data[i].print();
         }
         public void deleteFromTable(string str)
         {
@@ -159,26 +168,48 @@ namespace HashTable
         public bool search(string str)
         {
             int index = hash(str, this.size);
-                if (this.data[index].exist(str) >= 0)
-		        return true;
-	        return false;
+            if (this.data[index].exist(str) != -1)
+                return true;
+            return false;
         }
     }
     class Program
     {
         static void Main(string[] args)
         {
-            HashTable ht = new HashTable();
-            ht.createHashTable(15);
-            Console.WriteLine("Enter word");
-            string str = Console.ReadLine(); 
-            ht.addToTable(str);           
-            if (ht.search(str))
+            HashTable ht = new HashTable(35);
+            Console.WriteLine("Enter 1 to add a word to the hashtable");
+            Console.WriteLine("Enter 2 to delete a word from the hashtable");
+            Console.WriteLine("Enter 3 to find a word in the hashtable");
+            Console.WriteLine("Enter 4 to exit");
+            int command = -1;
+            string s = "nothing";
+            while (command != 4)
             {
-                Console.WriteLine("Yes");
+                Console.Write("Enter number of operation: ");
+                command = int.Parse(Console.ReadLine());
+                if (command == 1)
+                {
+                    Console.WriteLine("Enter a word to add: ");
+                    s = Console.ReadLine();
+                    ht.addToTable(s);
+                }
+                if (command == 2)
+                {
+                    Console.WriteLine("Enter a word to delete: ");
+                    s = Console.ReadLine();
+                    ht.deleteFromTable(s);
+                }
+                if (command == 3)
+                {
+                    Console.WriteLine("Enter a word to find: ");
+                    s = Console.ReadLine();
+                    if (ht.search(s))
+                        Console.WriteLine("Contains");
+                    else
+                        Console.WriteLine("Doesn't contain");
+                }
             }
-            else
-             Console.WriteLine("No");   
         }
     }
 }
