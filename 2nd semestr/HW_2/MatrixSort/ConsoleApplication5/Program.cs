@@ -6,29 +6,35 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication5
 {
-    class Program
+    public class Program
     {
         const int arrayLen = 3;
         const int arrayHigh = 3;
-        private static void InsertSort(int[,] a)
+
+        public static void swap(ref int number1, ref int number2)
         {
-            int temp1 = 0;
-            int temp2 = 0;
+            int temp = number1;
+            number1 = number2;
+            number2 = temp;
+        }
+
+        public static void InsertSort(int[,] a)
+        {
+
+            int row = 0;
             for (int i = 0; i < arrayLen; i++)
             {
-                temp2 = i;
-                while ((temp2 != arrayLen - 1) && (a[0,temp2 + 1] < a[0,temp2]))
+                row = i;
+                while ((row != arrayLen - 1) && (a[0,row + 1] < a[0,row]))
                 {
                     for (int j = 0; j < arrayHigh; j++)
                     {
-                        temp1 = a[j,temp2];
-                        a[j,temp2] = a[j,temp2 + 1];
-                        a[j,temp2 + 1] = temp1;
+                        swap(ref a[j , row], ref a[j, row + 1]);
                     }
-                        if (temp2 != 0)
-                            --temp2;
-                        else
-                            break;
+                    if (row != 0)
+                        --row;
+                    else
+                        break;
                 }
             }
         }

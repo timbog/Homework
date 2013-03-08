@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication5", "ConsoleApplication5\ConsoleApplication5.csproj", "{5CB76FD4-A1F4-44E6-BC4C-3A9FD953A7F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixSort.Tests", "MatrixSort.Tests\MatrixSort.Tests.csproj", "{F9A3BBE2-D772-4EE8-BFCF-0A4ABA01A4BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{5CB76FD4-A1F4-44E6-BC4C-3A9FD953A7F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CB76FD4-A1F4-44E6-BC4C-3A9FD953A7F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CB76FD4-A1F4-44E6-BC4C-3A9FD953A7F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9A3BBE2-D772-4EE8-BFCF-0A4ABA01A4BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9A3BBE2-D772-4EE8-BFCF-0A4ABA01A4BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9A3BBE2-D772-4EE8-BFCF-0A4ABA01A4BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9A3BBE2-D772-4EE8-BFCF-0A4ABA01A4BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
