@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication4
 {
-    class Program
+    public class Program
     {
-        const int arraySize = 3;
-        private static void SpiralWrite(int[,] a)
+        public const int arraySize = 3;
+
+        public static void SpiralWrite(int[,] a)
         {
-            int temp1 = arraySize / 2;
-            int temp2 = arraySize / 2;
+            int line = arraySize / 2;
+            int row = arraySize / 2;
             int stopper = 1;
             while (stopper <= arraySize)
             {
@@ -20,34 +21,34 @@ namespace ConsoleApplication4
                 {
                     for (int iterator = 0; iterator < stopper; ++iterator)
                     {
-                        Console.Write(a[temp1, temp2]);
+                        Console.Write(a[line, row]);
                         Console.Write(" ");
-                        temp1 = temp1 - 1;
+                        --line;
                     }
-                    if (temp1 < 0)
+                    if (line < 0)
                         break;
                     for (int iterator = 0; iterator < stopper; ++iterator)
                     {
-                        Console.Write(a[temp1, temp2]);
+                        Console.Write(a[line, row]);
                         Console.Write(" ");
-                        temp2 = temp2 + 1;
+                        ++row; ;
                     }
                 }
                 else
                 {
                     for (int iterator = 0; iterator < stopper; ++iterator)
                     {
-                        Console.Write(a[temp1, temp2]);
+                        Console.Write(a[line, row]);
                         Console.Write(" ");
-                        temp1 = temp1 + 1;
+                        ++line;
                     }
-                    if (temp1 > arraySize)
+                    if (line > arraySize)
                         break;
                     for (int iterator = 0; iterator < stopper; ++iterator)
                     {
-                        Console.Write(a[temp1, temp2]);
+                        Console.Write(a[line, row]);
                         Console.Write(" ");
-                        temp2 = temp2 - 1;
+                        --row;
                     }
                 }
                 ++stopper;
