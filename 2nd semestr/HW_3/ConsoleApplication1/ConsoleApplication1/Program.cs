@@ -6,20 +6,22 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class StackElement
+    public class Stack
     {
-        public int data;
-        public StackElement next;
-        public StackElement(int a)
+        private class StackElement
         {
-            this.data = a;
-            this.next = null;
+            public int data;
+            public StackElement next;
+            public StackElement(int value)
+            {
+                this.data = value;
+                this.next = null;
+            }
         }
-    }
-    class Stack
-    {
-        public StackElement head = null;
-        public void print()
+
+        private StackElement head = null;
+
+        public void Print()
         {
             StackElement i = this.head;
             if (i == null)
@@ -31,7 +33,7 @@ namespace ConsoleApplication1
             }
         }
 
-        public void add(int number)
+        public void Add(int number)
         {
             StackElement i = this.head;
             StackElement j = new StackElement(number);
@@ -39,7 +41,7 @@ namespace ConsoleApplication1
             this.head = j;
         }
 
-        public int take()
+        public int Pop()
         {
             StackElement i = this.head;
             if (i == null)
@@ -70,17 +72,17 @@ namespace ConsoleApplication1
                 if (command == 1)
                 {
                     Console.WriteLine("Stack is");
-                    stack.print();
+                    stack.Print();
                 }
                 if (command == 2)
                 {
                     Console.WriteLine("Enter number to add: ");
                     num = int.Parse(Console.ReadLine());
-                    stack.add(num);
+                    stack.Add(num);
                 }
                 if (command == 3)
                 {
-                    Console.WriteLine(stack.take());
+                    Console.WriteLine(stack.Pop());
                 }
             }
         }
