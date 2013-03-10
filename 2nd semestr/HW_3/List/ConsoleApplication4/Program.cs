@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace List
 {
-    class ListElement
+    public class List
     {
-        public int Data;
-        public ListElement Next;
-        public ListElement(int a)
+        private class ListElement
         {
-            this.Data = a;
-            this.Next = null;
+            public int Data;
+            public ListElement Next;
+            public ListElement(int value)
+            {
+                this.Data = value;
+                this.Next = null;
+            }
         }
-    }
-    class List
-    {
 
-        public ListElement head = null;
+        private ListElement head = null;
 
-        public void print()
+        public void Print()
         {
             ListElement i = this.head;
             if (i == null)
@@ -33,21 +33,22 @@ namespace List
             }
         }
 
-        public void add(int number)
+        public void Add(int number)
         {
             ListElement j = new ListElement(number);
             ListElement i = this.head;
-            if (head == null)
-            {
-                head = j;
-                return;
-            }
-            while (i.Next != null)
-                i = i.Next;
-            i.Next = j;
+            j.Next = i;
+            this.head = j;
         }
 
-        public void delete(int number)
+        public bool IsEmpty()
+        {
+            if (this.head == null)
+                return true;
+            return false;
+        }
+
+        public void Delete(int number)
         {
             if (head == null)
             {
@@ -93,19 +94,19 @@ namespace List
                 if (command == 1)
                 {
                     Console.WriteLine("List is");
-                    list.print();
+                    list.Print();
                 }
                 if (command == 2)
                 {
                     Console.WriteLine("Enter number to add: ");
                     num = int.Parse(Console.ReadLine());
-                    list.add(num);
+                    list.Add(num);
                 }
                 if (command == 3)
                 {
                     Console.WriteLine("Enter number to delete: ");
                     num = int.Parse(Console.ReadLine());
-                    list.delete(num);
+                    list.Delete(num);
                 }
             }
         }
