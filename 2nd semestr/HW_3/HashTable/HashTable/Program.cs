@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace HashTable
 {
-    class ListElement
+    public class List
     {
-        public string data;
-        public ListElement next;
-        public int num;
-
-        public ListElement(string a, int b)
+        public class ListElement
         {
-            this.data = a;
-            this.num = b;
-            this.next = null;
+            public string data;
+            public ListElement next;
+            public int num;
+
+            public ListElement(string a, int b)
+            {
+                this.data = a;
+                this.num = b;
+                this.next = null;
+            }
         }
-    }
-    class List
-    {
 
         public ListElement head = null;
 
-        public void print()
+        public void Print()
         {
             ListElement i = this.head;
             if (i == null)
@@ -36,7 +36,7 @@ namespace HashTable
             }
         }
 
-        public void add(string word, int val)
+        public void Add(string word, int val)
         {
             ListElement j = new ListElement(word, val);
             ListElement i = this.head;
@@ -50,7 +50,7 @@ namespace HashTable
             i.next = j;
         }
 
-        public void delete(string word)
+        public void Delete(string word)
         {
             if (head == null)
             {
@@ -76,7 +76,7 @@ namespace HashTable
             Console.WriteLine("No such word");
         }
 
-        public int exist(string word)
+        public int Exist(string word)
         {
             ListElement i = this.head;
             int iter = -1;
@@ -90,8 +90,7 @@ namespace HashTable
             return iter;
         }
     }
-
-    class HashTable
+    public class HashTable : List
     {
         private int size;
 
@@ -104,11 +103,10 @@ namespace HashTable
             for (int i = 0; i < s; ++i)
             {
                 data[i] = new List();
-                data[i].head = null;
             }
         }
 
-        public int hash(string str, int max)
+        public int Hash(string str, int max)
         {
             int result = 0;
             int i = 0;
@@ -121,18 +119,18 @@ namespace HashTable
             return result % max;
         }
 
-        public void addToTable(string str)
+        public void AddToTable(string str)
         {
-            int index = hash(str, this.size);
-            if (this.data[index].exist(str) == -1)
+            int index = Hash(str, this.size);
+            if (this.data[index].Exist(str) == -1)
             {
-                this.data[index].add(str, 1);
+                this.data[index].Add(str, 1);
             }
             else
             {
                 ListElement i = this.data[index].head;
                 int iter = 0;
-                while (iter != this.data[index].exist(str))
+                while (iter != this.data[index].Exist(str))
                 {
                     ++iter;
                     i = i.next;
@@ -141,38 +139,40 @@ namespace HashTable
             }
         }
 
-        public void printHt()
+        public void PrintHt()
         {
             for (int i = 0; i < this.size; ++i)
-                this.data[i].print();
+                this.data[i].Print();
         }
-        public void deleteFromTable(string str)
+
+        public void DeleteFromTable(string str)
         {
-            int index = hash(str, this.size);
-            if (this.data[index].exist(str) >= 0)
+            int index = Hash(str, this.size);
+            if (this.data[index].Exist(str) >= 0)
             {
                 ListElement i = this.data[index].head;
                 int iter = 0;
-                while (iter != this.data[index].exist(str))
+                while (iter != this.data[index].Exist(str))
                 {
                     ++iter;
                     i = i.next;
                 }
                 --i.num;
                 if (i.num == 0)
-                    this.data[index].delete(str);
+                    this.data[index].Delete(str);
             }
 
         }
 
-        public bool search(string str)
+        public bool Search(string str)
         {
-            int index = hash(str, this.size);
-            if (this.data[index].exist(str) != -1)
+            int index = Hash(str, this.size);
+            if (this.data[index].Exist(str) != -1)
                 return true;
             return false;
         }
     }
+
     class Program
     {
         static void Main(string[] args)
@@ -192,19 +192,19 @@ namespace HashTable
                 {
                     Console.WriteLine("Enter a word to add: ");
                     s = Console.ReadLine();
-                    ht.addToTable(s);
+                    ht.AddToTable(s);
                 }
                 if (command == 2)
                 {
                     Console.WriteLine("Enter a word to delete: ");
                     s = Console.ReadLine();
-                    ht.deleteFromTable(s);
+                    ht.DeleteFromTable(s);
                 }
                 if (command == 3)
                 {
                     Console.WriteLine("Enter a word to find: ");
                     s = Console.ReadLine();
-                    if (ht.search(s))
+                    if (ht.Search(s))
                         Console.WriteLine("Contains");
                     else
                         Console.WriteLine("Doesn't contain");
