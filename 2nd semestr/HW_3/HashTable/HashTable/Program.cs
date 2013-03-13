@@ -89,6 +89,17 @@ namespace HashTable
             }
             return iter;
         }
+
+        public ListElement Position(int position)
+        {
+            ListElement i = this.head;
+            for (int j = 0; j < position; j++)
+            {
+                i = i.next;
+            }
+            return i;
+        }
+        
     }
     public class HashTable : List
     {
@@ -128,14 +139,7 @@ namespace HashTable
             }
             else
             {
-                ListElement i = this.data[index].head;
-                int iter = 0;
-                while (iter != this.data[index].Exist(str))
-                {
-                    ++iter;
-                    i = i.next;
-                }
-                ++i.num;
+                ++this.data[index].Position(Exist(str)).num;
             }
         }
 
@@ -150,18 +154,10 @@ namespace HashTable
             int index = Hash(str, this.size);
             if (this.data[index].Exist(str) >= 0)
             {
-                ListElement i = this.data[index].head;
-                int iter = 0;
-                while (iter != this.data[index].Exist(str))
-                {
-                    ++iter;
-                    i = i.next;
-                }
-                --i.num;
-                if (i.num == 0)
+                --this.data[index].Position(Exist(str)).num;
+                if (this.data[index].Position(Exist(str)).num == 0)
                     this.data[index].Delete(str);
             }
-
         }
 
         public bool Search(string str)

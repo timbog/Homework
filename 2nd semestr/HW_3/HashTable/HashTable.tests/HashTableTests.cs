@@ -41,6 +41,14 @@ namespace HashTable.tests
         }
 
         [TestMethod]
+        public void PositionTest()
+        {
+            List list = new List();
+            list.Add("john", 1);
+            Assert.AreEqual(list.Position(list.Exist("john")), list.head);
+        }
+
+        [TestMethod]
         public void HashTest()
         {
             HashTable ht = new HashTable(35);           
