@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConsoleApplication5;
+using MatrixSort;
 
 namespace MatrixSort.Tests
 {
@@ -8,14 +8,15 @@ namespace MatrixSort.Tests
     public class MatrixSortTest
     {
         [TestMethod]
-        public void swapTest()
+        public void SwapTest()
         {
             int number1 = 5;
             int number2 = 6;
-            Program.swap(ref number1, ref number2);
-            Assert.IsTrue(number1 == 6);
-            Assert.IsTrue(number2 == 5);
+            MatrixSort.Swap(ref number1, ref number2);
+            Assert.AreEqual(number1, 6);
+            Assert.AreEqual(number2, 5);
         }
+
         [TestMethod]
         public void InsertSortTest()
         {
@@ -29,16 +30,16 @@ namespace MatrixSort.Tests
             matrix[2, 0] = 8;
             matrix[2, 1] = 2;
             matrix[2, 2] = 4;
-            Program.InsertSort(matrix);
-            Assert.IsTrue(matrix[0,0] == 1);
-            Assert.IsTrue(matrix[0,1] == 3);
-            Assert.IsTrue(matrix[0,2] == 4);
-            Assert.IsTrue(matrix[1,0] == 1);
-            Assert.IsTrue(matrix[1,1] == 5);
-            Assert.IsTrue(matrix[1,2] == 6);
-            Assert.IsTrue(matrix[2,0] == 4);
-            Assert.IsTrue(matrix[2,1] == 8);
-            Assert.IsTrue(matrix[2,2] == 2);
+            MatrixSort.InsertSort(matrix);
+            Assert.AreEqual(matrix[0, 0], 1);
+            Assert.AreEqual(matrix[0, 1], 3);
+            Assert.AreEqual(matrix[0, 2], 4);
+            Assert.AreEqual(matrix[1, 0], 1);
+            Assert.AreEqual(matrix[1, 1], 5);
+            Assert.AreEqual(matrix[1, 2], 6);
+            Assert.AreEqual(matrix[2, 0], 4);
+            Assert.AreEqual(matrix[2, 1], 8);
+            Assert.AreEqual(matrix[2, 2], 2);
         }
     }
 }

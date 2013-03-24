@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication5
+namespace MatrixSort
 {
-    public class Program
+    public class MatrixSort
     {
         const int arrayLen = 3;
         const int arrayHigh = 3;
 
-        public static void swap(ref int number1, ref int number2)
+        public static void Swap(ref int number1, ref int number2)
         {
             int temp = number1;
             number1 = number2;
@@ -29,7 +29,7 @@ namespace ConsoleApplication5
                 {
                     for (int j = 0; j < arrayHigh; j++)
                     {
-                        swap(ref a[j , row], ref a[j, row + 1]);
+                        Swap(ref a[j , row], ref a[j, row + 1]);
                     }
                     if (row != 0)
                         --row;
