@@ -9,7 +9,7 @@ namespace List.Tests
         [TestMethod]
         public void AddTest()
         {
-            List list = new List();
+            PointerList list = new PointerList();
             list.Add(8);
             list.Add(7);
             Assert.IsFalse(list.IsEmpty());
@@ -18,7 +18,7 @@ namespace List.Tests
         [TestMethod]
         public void DeleteTest()
         {
-            List list = new List();
+            PointerList list = new PointerList();
             list.Add(8);
             list.Delete(8);
             Assert.IsTrue(list.IsEmpty());
@@ -27,7 +27,7 @@ namespace List.Tests
         [TestMethod]
         public void PrintTest()
         {
-            List list = new List();
+            PointerList list = new PointerList();
             list.Print();
         }
     }

@@ -9,18 +9,18 @@ namespace HashTable
     public class List
     {
         /// <summary>
-        /// Class with which list is built
+        /// Class which is used to build a list
         /// </summary>
         public class ListElement
         {
             public string Data { get; set; }
             public ListElement Next { get; set; }
-            public int num { get; set; }
+            public int Num { get;set; }
 
-            public ListElement(string a, int b)
+            public ListElement(string str, int val)
             {
-                this.Data = a;
-                this.num = b;
+                this.Data = str;
+                this.Num = val;
                 this.Next = null;
             }
         }
@@ -31,7 +31,21 @@ namespace HashTable
         public ListElement head = null;
 
         /// <summary>
-        /// Method which adds a value to the list
+        /// Method which is used to print the list
+        /// </summary>
+        public void Print()
+        {
+            ListElement i = this.head;
+            if (i == null)
+                Console.WriteLine("Empty List");
+            while (i != null)
+            {
+                Console.WriteLine(i.Data);
+                i = i.Next;
+            }
+        }
+        /// <summary>
+        /// Method which is used to add a value to the list
         /// </summary>
         public void Add(string word, int val)
         {
@@ -48,7 +62,7 @@ namespace HashTable
         }
 
         /// <summary>
-        /// Method which deletes a value from the list
+        /// Method which is used to delete a value from the list
         /// </summary>
         public void Delete(string word)
         {
@@ -65,7 +79,6 @@ namespace HashTable
             }
             while (i.Next != null)
             {
-
                 if (i.Next.Data == word)
                 {
                     i.Next = i.Next.Next;
@@ -75,8 +88,9 @@ namespace HashTable
             }
             Console.WriteLine("No such word");
         }
+
         /// <summary>
-        /// Method which shows if this value exists in the list
+        /// Method which is used to find out if this value exists
         /// </summary>
         public int Exist(string word)
         {
@@ -93,7 +107,7 @@ namespace HashTable
         }
 
         /// <summary>
-        /// Method which returnes position of the value in the list
+        /// Method which returns position of the element in the list
         /// </summary>
         public ListElement Position(int position)
         {
@@ -104,6 +118,5 @@ namespace HashTable
             }
             return i;
         }
-
     }
 }

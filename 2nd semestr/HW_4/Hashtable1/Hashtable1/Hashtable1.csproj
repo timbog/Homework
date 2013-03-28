@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Hash.cs" />
+    <Compile Include="HashFunction1.cs" />
+    <Compile Include="HashFunction2.cs" />
     <Compile Include="Hashtable.cs" />
     <Compile Include="List.cs" />
     <Compile Include="Program.cs" />

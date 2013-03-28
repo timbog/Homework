@@ -14,20 +14,14 @@ namespace HashTable
         private int size;
 
         /// <summary>
-        /// Array of the lists
+        /// Array of lists
         /// </summary>
         private List[] data;
 
-        /// <summary>
-        /// Hash function
-        /// </summary>
-        public Hash hash;
-
         /// <param name="amount">Size of the hashtable</param>
-        public HashTable(int amount, Hash hash)
+        public HashTable(int amount)
         {
             this.size = amount;
-            this.hash = hash;
             data = new List[amount];
             for (int i = 0; i < amount; ++i)
             {
@@ -36,19 +30,43 @@ namespace HashTable
         }
 
         /// <summary>
+        /// Hash function
+        /// </summary>
+        public int Hash(string str, int max)
+        {
+            int result = 0;
+            int i = 0;
+            while (i < str.Length)
+            {
+                result = result + str[i];
+                ++i;
+            }
+            return result % max;
+        }
+
+        /// <summary>
         /// Method which is used to add a word to the hashtable
         /// </summary>
         public void AddToTable(string str)
         {
-            int index = this.hash.HashF(str, this.size);
+            int index = Hash(str, this.size);
             if (this.data[index].Exist(str) == -1)
             {
                 this.data[index].Add(str, 1);
             }
             else
             {
-                ++this.data[index].Position(this.data[index].Exist(str)).num;
+                ++this.data[index].Position(this.data[index].Exist(str)).Num;
             }
+        }
+
+        /// <summary>
+        /// Method which is used to print the hashtable
+        /// </summary>
+        public void PrintHt()
+        {
+            for (int i = 0; i < this.size; ++i)
+                this.data[i].Print();
         }
 
         /// <summary>
@@ -56,11 +74,11 @@ namespace HashTable
         /// </summary>
         public void DeleteFromTable(string str)
         {
-            int index = this.hash.HashF(str, this.size);
+            int index = Hash(str, this.size);
             if (this.data[index].Exist(str) >= 0)
             {
-                --this.data[index].Position(this.data[index].Exist(str)).num;
-                if (this.data[index].Position(this.data[index].Exist(str)).num == 0)
+                --this.data[index].Position(this.data[index].Exist(str)).Num;
+                if (this.data[index].Position(this.data[index].Exist(str)).Num == 0)
                     this.data[index].Delete(str);
             }
         }
@@ -70,7 +88,7 @@ namespace HashTable
         /// </summary>
         public bool Search(string str)
         {
-            int index = this.hash.HashF(str, this.size);
+            int index = Hash(str, this.size);
             return (this.data[index].Exist(str) != -1);
         }
     }
