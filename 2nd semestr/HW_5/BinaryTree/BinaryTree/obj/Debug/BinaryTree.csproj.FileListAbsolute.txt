@@ -1,0 +1,6 @@
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_5\BinaryTree\BinaryTree\bin\Debug\BinaryTree.exe.config
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_5\BinaryTree\BinaryTree\bin\Debug\BinaryTree.exe
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_5\BinaryTree\BinaryTree\bin\Debug\BinaryTree.pdb
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_5\BinaryTree\BinaryTree\obj\Debug\BinaryTree.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_5\BinaryTree\BinaryTree\obj\Debug\BinaryTree.exe
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_5\BinaryTree\BinaryTree\obj\Debug\BinaryTree.pdb
