@@ -21,10 +21,10 @@ namespace HashTable
         /// <summary>
         /// Hash function
         /// </summary>
-        public Hash hash;
+        public IHash hash;
 
         /// <param name="amount">Size of the hashtable</param>
-        public HashTable(int amount, Hash hash)
+        public HashTable(int amount, IHash hash)
         {
             this.size = amount;
             this.hash = hash;

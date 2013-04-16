@@ -15,19 +15,13 @@ namespace PointerStack.Tests
         }
 
         [TestMethod]
+        [ExpectedException(typeof(System.Exception))]
         public void PopTest()
         {
             StackCalculator.PointerStack stack = new StackCalculator.PointerStack();
+            stack.Pop();
             stack.Push(6);
             Assert.AreEqual(stack.Pop(), 6);
-        }
-
-        [TestMethod]
-        public void CountTest()
-        {
-            StackCalculator.PointerStack stack = new StackCalculator.PointerStack();
-            string str = "8_9+3-";
-            Assert.AreEqual(stack.Count(str), 14);
         }
     }
 }

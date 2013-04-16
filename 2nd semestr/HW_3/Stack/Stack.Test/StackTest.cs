@@ -10,15 +10,17 @@ namespace Stack.Test
         [TestMethod]
         public void AddTest()
         {
-            var stack = new Stack();
+            var stack = new PointerStack();
             stack.Add(5);
             Assert.AreEqual(5, stack.Pop());
         }
 
         [TestMethod]
+        [ExpectedException(typeof (System.Exception))]
         public void PopTest()
         {
-            var stack = new Stack();
+            var stack = new PointerStack();
+            stack.Pop();
             stack.Add(6);
             stack.Add(5);
             stack.Add(7);
@@ -30,7 +32,7 @@ namespace Stack.Test
         [TestMethod]
         public void PrintTest()
         {
-            var stack = new Stack();
+            var stack = new PointerStack();
             stack.Add(6);
             stack.Add(5);
             stack.Add(7);

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F9A3BBE2-D772-4EE8-BFCF-0A4ABA01A4BC}</ProjectGuid>
+    <ProjectGuid>{A846D37D-544E-4062-B701-D89849767704}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MatrixSort.Tests</RootNamespace>
@@ -50,13 +50,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="MatrixSortTest.cs" />
+    <Compile Include="MatrixSortTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApplication5\ConsoleApplication5.csproj">
-      <Project>{5cb76fd4-a1f4-44e6-bc4c-3a9fd953a7f5}</Project>
-      <Name>ConsoleApplication5</Name>
+    <ProjectReference Include="..\MatrixSort\MatrixSort.csproj">
+      <Project>{ef3e3cf5-489c-4020-8eb6-aed8c0dc74dd}</Project>
+      <Name>MatrixSort</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

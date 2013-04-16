@@ -16,9 +16,11 @@ namespace List.Tests
         }
 
         [TestMethod]
+        [ExpectedException(typeof(System.Exception))]
         public void DeleteTest()
         {
             PointerList list = new PointerList();
+            list.Delete(2);
             list.Add(8);
             list.Delete(8);
             Assert.IsTrue(list.IsEmpty());

@@ -1,0 +1,7 @@
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\ArrayStack.Tests\bin\Debug\ArrayStack.Tests.dll
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\ArrayStack.Tests\bin\Debug\ArrayStack.Tests.pdb
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\ArrayStack.Tests\bin\Debug\StackCalculator.exe
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\ArrayStack.Tests\bin\Debug\StackCalculator.pdb
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\ArrayStack.Tests\obj\Debug\ArrayStack.Tests.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\ArrayStack.Tests\obj\Debug\ArrayStack.Tests.dll
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\ArrayStack.Tests\obj\Debug\ArrayStack.Tests.pdb

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7E315848-9227-4C04-8F6E-A8064D69B039}</ProjectGuid>
+    <ProjectGuid>{982BD20C-604E-404D-8244-EDB79B47782D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>List.Tests</RootNamespace>
@@ -54,8 +54,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApplication4\List.csproj">
-      <Project>{f7ce032c-9d9e-4cb0-b3c5-7b73844aa3c5}</Project>
+    <ProjectReference Include="..\List\List.csproj">
+      <Project>{098ae92f-af5b-4354-a988-6b4ff2714618}</Project>
       <Name>List</Name>
     </ProjectReference>
   </ItemGroup>

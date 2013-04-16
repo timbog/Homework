@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2012\Projects\UniqueList\UniqueList\bin\Debug\UniqueList.exe.config
+C:\Users\User\Documents\Visual Studio 2012\Projects\UniqueList\UniqueList\obj\Debug\UniqueList.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2012\Projects\UniqueList\UniqueList\bin\Debug\UniqueList.exe
+C:\Users\User\Documents\Visual Studio 2012\Projects\UniqueList\UniqueList\bin\Debug\UniqueList.pdb
+C:\Users\User\Documents\Visual Studio 2012\Projects\UniqueList\UniqueList\obj\Debug\UniqueList.exe
+C:\Users\User\Documents\Visual Studio 2012\Projects\UniqueList\UniqueList\obj\Debug\UniqueList.pdb

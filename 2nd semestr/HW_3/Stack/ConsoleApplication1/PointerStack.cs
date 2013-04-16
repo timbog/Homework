@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stack
 {
-    public class Stack
+    public class PointerStack
     {
         /// <summary>
         /// This class is used to build a stack
@@ -60,8 +60,7 @@ namespace Stack
             StackElement i = this.head;
             if (i == null)
             {
-                Console.WriteLine("Empty Stack");
-                return -1;
+                throw new Exception("Empty Stack");
             }
             this.head = i.Next;
             return i.Data;

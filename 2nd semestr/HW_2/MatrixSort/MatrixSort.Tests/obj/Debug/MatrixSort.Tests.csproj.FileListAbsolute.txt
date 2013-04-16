@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2012\Projects\MatrixSort\MatrixSort.Tests\bin\Debug\MatrixSort.Tests.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\MatrixSort\MatrixSort.Tests\bin\Debug\MatrixSort.Tests.pdb
+C:\Users\User\Documents\Visual Studio 2012\Projects\MatrixSort\MatrixSort.Tests\bin\Debug\MatrixSort.exe
+C:\Users\User\Documents\Visual Studio 2012\Projects\MatrixSort\MatrixSort.Tests\bin\Debug\MatrixSort.pdb
+C:\Users\User\Documents\Visual Studio 2012\Projects\MatrixSort\MatrixSort.Tests\obj\Debug\MatrixSort.Tests.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2012\Projects\MatrixSort\MatrixSort.Tests\obj\Debug\MatrixSort.Tests.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\MatrixSort\MatrixSort.Tests\obj\Debug\MatrixSort.Tests.pdb

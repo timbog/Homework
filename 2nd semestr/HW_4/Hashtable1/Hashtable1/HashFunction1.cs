@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HashTable
 {
-    public class HashFunction1 : Hash
+    public class HashFunction1 : IHash
     {
         /// <summary>
         /// Method which is used to count a hash function

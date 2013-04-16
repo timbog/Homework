@@ -1,0 +1,7 @@
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\Calculator.Test\bin\Debug\Calculator.Test.dll
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\Calculator.Test\bin\Debug\Calculator.Test.pdb
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\Calculator.Test\bin\Debug\StackCalculator.exe
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\Calculator.Test\bin\Debug\StackCalculator.pdb
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\Calculator.Test\obj\Debug\Calculator.Test.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\Calculator.Test\obj\Debug\Calculator.Test.dll
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\Calculator.Test\obj\Debug\Calculator.Test.pdb

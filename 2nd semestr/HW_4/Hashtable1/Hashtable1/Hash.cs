@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HashTable
 {
-    public interface Hash
+    public interface IHash
     {
         int HashF(string str, int max);
     }

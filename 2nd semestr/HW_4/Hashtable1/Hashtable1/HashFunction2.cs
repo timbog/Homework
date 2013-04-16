@@ -6,20 +6,14 @@ using System.Threading.Tasks;
 
 namespace HashTable
 {
-    public class HashFunction2 : Hash
+    public class HashFunction2 : IHash
     {
         /// <summary>
         /// Method which is used to count a hash function
         /// </summary>
         public int HashF(string str, int max)
         {
-            int len = str.Length;
-            int hashf = 0;
-            if (len <= 1)
-                hashf = str[0];
-            else
-                hashf = str[0] + str[len - 1];
-            return hashf % max;
+           return str.GetHashCode() % (max - 1);
         }
     }
 }

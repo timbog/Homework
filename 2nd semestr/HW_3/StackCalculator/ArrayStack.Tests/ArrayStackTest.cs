@@ -14,18 +14,13 @@ namespace ArrayStack.Tests
             Assert.AreEqual(stack.Pop(), 4);
         }
         [TestMethod]
+        [ExpectedException(typeof(System.Exception))]
         public void PopTest()
         {
             StackCalculator.ArrayStack stack = new StackCalculator.ArrayStack(5);
+            stack.Pop();
             stack.Push(6);
             Assert.AreEqual(stack.Pop(), 6);
-        }
-        [TestMethod]
-        public void CountTest()
-        {
-            StackCalculator.ArrayStack stack = new StackCalculator.ArrayStack(5);
-            string str = "8_9+3-";
-            Assert.AreEqual(stack.Count(str), 14);
         }
     }
 }

@@ -1,0 +1,7 @@
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\Stack\Stack.Test\bin\Debug\Stack.Test.dll
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\Stack\Stack.Test\bin\Debug\Stack.Test.pdb
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\Stack\Stack.Test\bin\Debug\ConsoleApplication1.exe
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\Stack\Stack.Test\bin\Debug\ConsoleApplication1.pdb
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\Stack\Stack.Test\obj\Debug\Stack.Test.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\Stack\Stack.Test\obj\Debug\Stack.Test.dll
+C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\Stack\Stack.Test\obj\Debug\Stack.Test.pdb

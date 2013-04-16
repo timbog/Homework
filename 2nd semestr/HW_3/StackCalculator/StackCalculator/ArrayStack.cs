@@ -37,42 +37,9 @@ namespace StackCalculator
         /// </summary>
         public int Pop()
         {
+            if (Current == -1)
+                throw new Exception("Emty Stack");
             return Data[Current--];
         }
-
-        /// <summary>
-        /// Method which counts an ariphmetic expression
-        /// </summary>
-        public int Count(string str)
-        {
-            int top = 0;
-            int number = 0;
-            int result = 0;
-            for (int i = 0; i < str.Length; ++i)
-            {
-                if ((str[i] != '+') && (str[i] != '*') && (str[i] != '-') && (str[i] != '/') && (str[i] != '_'))
-                {
-                    number = (number * 10) + (int)str[i] - (int)'0';
-                }
-                else
-                {
-                    result = number;
-                    if (str[i] != '_')
-                        top = this.Pop();
-                    if (str[i] == '+')
-                        result = top + number;
-                    if (str[i] == '-')
-                        result = top - number;
-                    if (str[i] == '*')
-                        result = top * number;
-                    if (str[i] == '/')
-                        result = top / number;
-                    this.Push(result);
-                    result = 0;
-                    number = 0;
-                }
-            }
-            return this.Pop();
-        } 
     }
 }

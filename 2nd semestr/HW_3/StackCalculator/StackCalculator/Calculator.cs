@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StackCalculator
 {
-    class Calculator
+    public class Calculator
     {
         private IStack stack;
 
@@ -22,7 +22,34 @@ namespace StackCalculator
         /// </summary>
         public int ExecuteOperation(string str)
         {
-            return stack.Count(str);
+            int top = 0;
+            int number = 0;
+            int result = 0;
+            for (int i = 0; i < str.Length; ++i)
+            {
+                if ((str[i] != '+') && (str[i] != '*') && (str[i] != '-') && (str[i] != '/') && (str[i] != ' '))
+                {
+                    number = (number * 10) + (int)str[i] - (int)'0';
+                }
+                else
+                {
+                    result = number;
+                    if (str[i] != ' ')
+                        top = stack.Pop();
+                    if (str[i] == '+')
+                        result = top + number;
+                    if (str[i] == '-')
+                        result = top - number;
+                    if (str[i] == '*')
+                        result = top * number;
+                    if (str[i] == '/')
+                        result = top / number;
+                    stack.Push(result);
+                    result = 0;
+                    number = 0;
+                }
+            }
+            return stack.Pop();
         }
     }
 }
