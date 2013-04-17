@@ -1,7 +1,0 @@
-C:\Users\User\Documents\Visual Studio 2012\Projects\UniqueList\UniqueList.Tests\bin\Debug\UniqueList.Tests.dll
-C:\Users\User\Documents\Visual Studio 2012\Projects\UniqueList\UniqueList.Tests\bin\Debug\UniqueList.Tests.pdb
-C:\Users\User\Documents\Visual Studio 2012\Projects\UniqueList\UniqueList.Tests\bin\Debug\UniqueList.exe
-C:\Users\User\Documents\Visual Studio 2012\Projects\UniqueList\UniqueList.Tests\bin\Debug\UniqueList.pdb
-C:\Users\User\Documents\Visual Studio 2012\Projects\UniqueList\UniqueList.Tests\obj\Debug\UniqueList.Tests.csprojResolveAssemblyReference.cache
-C:\Users\User\Documents\Visual Studio 2012\Projects\UniqueList\UniqueList.Tests\obj\Debug\UniqueList.Tests.dll
-C:\Users\User\Documents\Visual Studio 2012\Projects\UniqueList\UniqueList.Tests\obj\Debug\UniqueList.Tests.pdb

@@ -1,7 +1,0 @@
-C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\PointerStack.Tests\bin\Debug\PointerStack.Tests.dll
-C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\PointerStack.Tests\bin\Debug\PointerStack.Tests.pdb
-C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\PointerStack.Tests\bin\Debug\StackCalculator.exe
-C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\PointerStack.Tests\bin\Debug\StackCalculator.pdb
-C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\PointerStack.Tests\obj\Debug\PointerStack.Tests.csprojResolveAssemblyReference.cache
-C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\PointerStack.Tests\obj\Debug\PointerStack.Tests.dll
-C:\Users\User\Documents\GitHub\Homework\2nd semestr\HW_3\StackCalculator\PointerStack.Tests\obj\Debug\PointerStack.Tests.pdb
