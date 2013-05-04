@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeList", "ChangeList\ChangeList.csproj", "{F25A4651-39AA-44D0-9A5E-780010D3B08C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeList.Tests", "ChangeList.Tests\ChangeList.Tests.csproj", "{6E506C66-9171-45F8-9210-D36764ECEEA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F25A4651-39AA-44D0-9A5E-780010D3B08C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F25A4651-39AA-44D0-9A5E-780010D3B08C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F25A4651-39AA-44D0-9A5E-780010D3B08C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F25A4651-39AA-44D0-9A5E-780010D3B08C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E506C66-9171-45F8-9210-D36764ECEEA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E506C66-9171-45F8-9210-D36764ECEEA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E506C66-9171-45F8-9210-D36764ECEEA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E506C66-9171-45F8-9210-D36764ECEEA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
