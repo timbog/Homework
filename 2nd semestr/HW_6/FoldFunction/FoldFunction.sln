@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoldFunction", "FoldFunction\FoldFunction.csproj", "{EBF27B4F-5064-4393-87A2-79B7077317BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fold.Tests", "Fold.Tests\Fold.Tests.csproj", "{2520AAC9-CF63-4373-A881-848270B93422}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBF27B4F-5064-4393-87A2-79B7077317BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBF27B4F-5064-4393-87A2-79B7077317BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBF27B4F-5064-4393-87A2-79B7077317BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBF27B4F-5064-4393-87A2-79B7077317BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2520AAC9-CF63-4373-A881-848270B93422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2520AAC9-CF63-4373-A881-848270B93422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2520AAC9-CF63-4373-A881-848270B93422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2520AAC9-CF63-4373-A881-848270B93422}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
