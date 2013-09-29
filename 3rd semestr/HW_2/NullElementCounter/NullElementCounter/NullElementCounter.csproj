@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AAF6DF58-F4D3-41A6-8D54-FF00F4100129}</ProjectGuid>
+    <ProjectGuid>{C59BA08E-BCE4-4F9F-9DA8-6477BFFCC61F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NullElementCount</RootNamespace>
-    <AssemblyName>NullElementCount</AssemblyName>
+    <RootNamespace>NullElementCounter</RootNamespace>
+    <AssemblyName>NullElementCounter</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NullCounter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
