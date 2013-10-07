@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20617.1 PREVIEW
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robots", "Robots\Robots.csproj", "{84933756-1213-409F-A3D2-EA4B10260644}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robots.Tests", "Robots.Tests\Robots.Tests.csproj", "{D98E43E8-7E5C-4D72-81E8-DD25AC1C6EA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84933756-1213-409F-A3D2-EA4B10260644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84933756-1213-409F-A3D2-EA4B10260644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84933756-1213-409F-A3D2-EA4B10260644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84933756-1213-409F-A3D2-EA4B10260644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D98E43E8-7E5C-4D72-81E8-DD25AC1C6EA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D98E43E8-7E5C-4D72-81E8-DD25AC1C6EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D98E43E8-7E5C-4D72-81E8-DD25AC1C6EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D98E43E8-7E5C-4D72-81E8-DD25AC1C6EA2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
