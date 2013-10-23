@@ -28,8 +28,8 @@ namespace Robots
             {
                 robotCoordinates[i] = int.Parse(Console.ReadLine());
             }
-            RobotsGraph graph = new RobotsGraph(matrix, pointAmount, robotAmount, robotCoordinates);
-            if (graph.result)
+            RobotsGraph graph = new RobotsGraph(matrix, robotCoordinates);
+            if (graph.Result)
                 Console.WriteLine("Yes");
             else
                 Console.WriteLine("No");

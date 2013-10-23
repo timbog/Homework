@@ -11,27 +11,27 @@ namespace Robots
         /// <summary>
         /// Size of the matrix
         /// </summary>
-        public int matrixSize { get; set; }
+        private int MatrixSize;
 
         /// <summary>
         /// Base matrix
         /// </summary>
-        public int[,] oldMatrix { get; set; }
+        private int[,] OldMatrix;
 
         /// <summary>
         /// Changed matrix
         /// </summary>
-        public int[,] newMatrix { get; set; }
+        private int[,] NewMatrix;
 
         /// <summary>
         /// Shows if point is visited
         /// </summary>
-        public bool[] visited { get; set; }
+        private bool[] Visited;
 
         /// <summary>
         /// Answer
         /// </summary>
-        public bool result { get; set; }
+        public bool Result { get; set; }
 
         /// <summary>
         /// Constructor
@@ -40,29 +40,29 @@ namespace Robots
         /// <param name="size">Size of the matrix</param>
         /// <param name="robotAmount">Amount of robots</param>
         /// <param name="robotCoordinates">Coordinates of robots</param>
-        public RobotsGraph(int[,] matrix, int size, int robotAmount, int[] robotCoordinates)
+        public RobotsGraph(int[,] matrix, int[] robotCoordinates)
         {
-            this.result = true;
-            this.matrixSize = size;
-            this.oldMatrix = matrix;
-            this.newMatrix = new int[this.matrixSize, this.matrixSize];
-            this.visited = new bool[size];
-            for (int i = 0; i < matrixSize; ++i)
+            this.Result = true;
+            this.MatrixSize = matrix.GetLength(0);
+            this.OldMatrix = matrix;
+            this.NewMatrix = new int[this.MatrixSize, this.MatrixSize];
+            this.Visited = new bool[matrix.Length];
+            for (int i = 0; i < MatrixSize; ++i)
             {
-                visited[i] = false;
+                Visited[i] = false;
             }
             this.BuildNewMatrix(0);
             bool flag = false;
-            for (int j = 0; j < robotAmount; ++j)
+            for (int j = 0; j < robotCoordinates.Length; ++j)
             {
-                for (int k = 0; k < robotAmount; ++k)
+                for (int k = 0; k < robotCoordinates.Length; ++k)
                 {
                     if (this.WayExists(robotCoordinates[j], robotCoordinates[k]))
                         flag = true;
                 }
                 if (!flag)
                 {
-                    this.result = false;
+                    this.Result = false;
                     return;
                 }
                 flag = false;
@@ -75,26 +75,26 @@ namespace Robots
         /// <param name="index">From which index to build</param>
         public void BuildNewMatrix(int index)
         {
-            visited[index] = true;
-            for (int i = 0; i < matrixSize; ++i)
+            Visited[index] = true;
+            for (int i = 0; i < MatrixSize; ++i)
             {
-                if ((oldMatrix[index, i] != 0) && (!visited[i]))
+                if ((OldMatrix[index, i] != 0) && (!Visited[i]))
                 {
-                    visited[i] = true;
-                    for (int j = 0; j < matrixSize; ++j)
+                    Visited[i] = true;
+                    for (int j = 0; j < MatrixSize; ++j)
                     {
-                        if ((oldMatrix[i, j] != 0) && (!visited[j]))
+                        if ((OldMatrix[i, j] != 0) && (!Visited[j]))
                         {
-                            newMatrix[index, j] = 1;
-                            newMatrix[j, index] = 1;
+                            NewMatrix[index, j] = 1;
+                            NewMatrix[j, index] = 1;
                             this.BuildNewMatrix(j);
                         }
                     }
                 }
             }
-            for (int i = 0; i < matrixSize; ++i)
+            for (int i = 0; i < MatrixSize; ++i)
             {
-                visited[i] = false;
+                Visited[i] = false;
             }
         }
 
@@ -106,12 +106,12 @@ namespace Robots
         /// <returns>Connection information</returns>
         public bool WayExists(int firstPoint, int secondPoint)
         {
-            if (newMatrix[firstPoint,secondPoint] == 1)
+            if (NewMatrix[firstPoint,secondPoint] == 1)
                 return true;
-            visited[firstPoint] = true;
-            for (int i = 0; i < matrixSize; ++i)
+            Visited[firstPoint] = true;
+            for (int i = 0; i < MatrixSize; ++i)
             {
-                if ((oldMatrix[firstPoint, i] != 0) && (!visited[i]))
+                if ((NewMatrix[firstPoint, i] != 0) && (!Visited[i]))
                 {
                     if (this.WayExists(i, secondPoint))
                         return true;
@@ -119,6 +119,5 @@ namespace Robots
             }
             return false;
         }
-
     }
 }
