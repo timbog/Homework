@@ -13,9 +13,20 @@ namespace TreeIterator.Tests
             tree.AddValue(8);
             tree.AddValue(7);
             tree.AddValue(9);
-            Assert.AreEqual(tree.head.Value, 8);
-            Assert.AreEqual(tree.head.Left.Value, 7);
-            Assert.AreEqual(tree.head.Right.Value, 9);
+            Assert.AreEqual(tree.ShowValue(tree.Head), 8);
+            Assert.AreEqual(tree.ShowValue(tree.Head.Left), 7);
+            Assert.AreEqual(tree.ShowValue(tree.Head.Right), 9);
+        }
+
+        [TestMethod]
+        public void IteratorTest()
+        {
+            Tree tree = new Tree();
+            tree.AddValue(8);
+            tree.AddValue(7);
+            tree.AddValue(9);
+            foreach (Tree.Node node in tree)
+                Assert.IsTrue(node != null);
         }
     }
 }
