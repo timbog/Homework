@@ -14,11 +14,12 @@ namespace LocalNetwork
         /// <param name="connectMatrix">Graph</param>
         /// <param name="osMatrix">Matrix with the names of the operation systems</param>
         /// <param name="virusMatrix">Matrix which shows the state of each computer</param>
-        public Network(int[,] connectMatrix, string[] osMatrix, bool[] virusMatrix)
+        public Network(int[,] connectMatrix, string[] osMatrix, bool[] virusMatrix, int[] probabilityMatrix)
         {
             this.LinkMatrix = connectMatrix;
             this.SystemMatrix = osMatrix;
             this.VirusMatrix = virusMatrix;
+            this.ProbabilityMatrix = probabilityMatrix;
         }
         /// <summary>
         /// Graph
@@ -33,7 +34,12 @@ namespace LocalNetwork
         /// <summary>
         /// Matrix which shows the state of each computer
         /// </summary>
-        public bool[] VirusMatrix { get; set; } 
+        public bool[] VirusMatrix { get; set; }
+
+        /// <summary>
+        /// Matrix with probabilities of the infections
+        /// </summary>
+        public int[] ProbabilityMatrix { get; set; }
  
         /// <summary>
         /// One step of the program
@@ -45,39 +51,24 @@ namespace LocalNetwork
             {
                 newInfection[i] = false;
             }
+            Random random = new Random();
             for (int i = 0; i < LinkMatrix.GetLength(0); i++)
             {
                 for (int j = 0; j < LinkMatrix.GetLength(0); j++)
                 {
-                    if ((LinkMatrix[i, j] == 1) && (VirusMatrix[j]) && (!VirusMatrix[i]) && (!newInfection[i]))
+                    if ((LinkMatrix[i, j] == 1) && (VirusMatrix[j]) && (!VirusMatrix[i]) && (!newInfection[j]))
                     {
-                        int random = new Random().Next(0, 1000);
+                        int temp = random.Next(0, 100);
                         if (String.Equals(SystemMatrix[i], "Windows"))
-                        {
-                            if ((random % 5 == 1) || (random % 5 == 0))
-                            {
-                                VirusMatrix[i] = true;
-                            }
-                        }
+                            VirusMatrix[i] = temp <= ProbabilityMatrix[0];
                         if (String.Equals(SystemMatrix[i], "Linux"))
-                        {
-                            if (random % 5 == 3)
-                            {
-                                VirusMatrix[i] = true;
-                            }
-                        }
+                            VirusMatrix[i] = temp <= ProbabilityMatrix[1];
                         if (String.Equals(SystemMatrix[i], "MacOS"))
-                        {
-                            if ((random % 5 == 1) || (random % 5 == 0) || (random % 5 == 3))
-                            {
-                                VirusMatrix[i] = true;
-                            }
-                        }
+                            VirusMatrix[i] = temp <= ProbabilityMatrix[2];
                         if (VirusMatrix[i])
                             newInfection[i] = true;
                     }
-                }
-
+                }               
             }
         }
         /// <summary>

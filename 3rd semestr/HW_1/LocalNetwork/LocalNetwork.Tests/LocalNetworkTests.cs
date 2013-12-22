@@ -28,10 +28,15 @@ namespace LocalNetwork.Tests
             virusMatrix[0] = true;
             virusMatrix[1] = false;
             virusMatrix[2] = false;
-            Network network = new Network(matrix, osMatrix, virusMatrix);
+            int[] probabilityMatrix = new int[3];
+            probabilityMatrix[0] = 100;
+            probabilityMatrix[1] = 100;
+            probabilityMatrix[2] = 100;
+            Network network = new Network(matrix, osMatrix, virusMatrix, probabilityMatrix);
             bool[] state = network.GetState();
-            Assert.IsTrue(virusMatrix[0]);
-            Assert.IsTrue(!virusMatrix[2]);
+            Assert.IsTrue(!network.allInfected());
+            state = network.GetState();
+            Assert.IsTrue(network.allInfected());
         }
     }
 }

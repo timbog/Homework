@@ -33,7 +33,7 @@ namespace LocalNetwork
                 }
                 if (String.Equals(tempString, "M"))
                 {
-                    osMatrix[i] = "MacOs";
+                    osMatrix[i] = "MacOS";
                 }
                 if (String.Equals(tempString, "L"))
                 {
@@ -59,13 +59,15 @@ namespace LocalNetwork
             Console.WriteLine("For example:10001010111");
             for (int i = 0; i < amount; ++i)
             {
-                if (Console.Read() == 49)
-                    virusMatrix[i] = true;
-                else
-                    virusMatrix[i] = false;
+                virusMatrix[i] = Console.Read() == 49;
             }
 
-            Network network = new Network(matrix, osMatrix, virusMatrix);
+            int[] probabilityMatrix = new int[3];
+            probabilityMatrix[0] = 40;
+            probabilityMatrix[1] = 60;
+            probabilityMatrix[2] = 30;
+
+            Network network = new Network(matrix, osMatrix, virusMatrix, probabilityMatrix);
             bool[] state = network.GetState();
             Console.WriteLine();
             while (!network.allInfected())
