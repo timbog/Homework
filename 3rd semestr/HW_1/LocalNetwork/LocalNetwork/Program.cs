@@ -68,6 +68,7 @@ namespace LocalNetwork
             probabilityMatrix[2] = 30;
 
             Network network = new Network(matrix, osMatrix, virusMatrix, probabilityMatrix);
+
             bool[] state = network.GetState();
             Console.WriteLine();
             while (!network.allInfected())

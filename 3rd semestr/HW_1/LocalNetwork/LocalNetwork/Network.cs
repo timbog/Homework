@@ -44,21 +44,20 @@ namespace LocalNetwork
         /// <summary>
         /// One step of the program
         /// </summary>
-        public void OneMove()
+        public void OneMove(int[,] randomMatrix)
         {
             bool[] newInfection = new bool[LinkMatrix.GetLength(0)];
             for (int i = 0; i < LinkMatrix.GetLength(0); i++)
             {
                 newInfection[i] = false;
             }
-            Random random = new Random();
             for (int i = 0; i < LinkMatrix.GetLength(0); i++)
             {
                 for (int j = 0; j < LinkMatrix.GetLength(0); j++)
                 {
                     if ((LinkMatrix[i, j] == 1) && (VirusMatrix[j]) && (!VirusMatrix[i]) && (!newInfection[j]))
                     {
-                        int temp = random.Next(0, 100);
+                        int temp = randomMatrix[i,j];
                         if (String.Equals(SystemMatrix[i], "Windows"))
                             VirusMatrix[i] = temp <= ProbabilityMatrix[0];
                         if (String.Equals(SystemMatrix[i], "Linux"))
@@ -90,7 +89,17 @@ namespace LocalNetwork
         /// <returns>State of the system</returns>
         public bool[] GetState()
         {
-            OneMove();
+            int[,] randomMatrix = new int[LinkMatrix.GetLength(0), LinkMatrix.GetLength(0)];
+            Random random = new Random();
+            for (int i = 0; i < LinkMatrix.GetLength(0); ++i)
+            {
+                for (int j = 0; j < LinkMatrix.GetLength(0); ++j)
+                {
+                    int temp1 = random.Next(0, 100);
+                    randomMatrix[i, j] = temp1;
+                }
+            }
+            OneMove(randomMatrix);
             return VirusMatrix;
         }
     }

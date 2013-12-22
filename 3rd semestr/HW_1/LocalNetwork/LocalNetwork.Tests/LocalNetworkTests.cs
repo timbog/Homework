@@ -32,10 +32,18 @@ namespace LocalNetwork.Tests
             probabilityMatrix[0] = 100;
             probabilityMatrix[1] = 100;
             probabilityMatrix[2] = 100;
+            int[,] randomMatrix = new int[3,3];
+            for (int i = 0; i < 3; ++i)
+            {
+                for (int j = 0; j < 3; ++j)
+                {
+                    randomMatrix[i, j] = 30;
+                }
+            }
             Network network = new Network(matrix, osMatrix, virusMatrix, probabilityMatrix);
-            bool[] state = network.GetState();
+            network.OneMove(randomMatrix);
             Assert.IsTrue(!network.allInfected());
-            state = network.GetState();
+            network.OneMove(randomMatrix);
             Assert.IsTrue(network.allInfected());
         }
     }
