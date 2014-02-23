@@ -6,6 +6,6 @@ let rec fac n =
 [<EntryPoint>]
 let main argv = 
     printfn "%A" argv
-    let x = System.Console.Read() - 48;
+    let x = System.Int32.Parse(System.Console.ReadLine());
     System.Console.WriteLine(fac x);
     0 // возвращение целочисленного кода выхода
