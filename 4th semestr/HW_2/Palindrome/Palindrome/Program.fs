@@ -1,16 +1,17 @@
-﻿System.Console.WriteLine("Enter string: ")
-let input = System.Console.ReadLine();
+﻿printfn "Enter string: "
+let input = System.Console.ReadLine()
 
-let palCheck (str:string) =
+let rec palCheck (str:string) =
+    let mutable temp = str.[str.Length - 1]
     match str.[0] with
-    |str.[str.Length] when (str.Length <> (1||0))-> palCheck str.[1..str.Length - 1]
-    |str.[str.Length] when (str.Length = (1||0)) ->true
-    |_ -> false
+        |temp when (str.Length > 2) -> palCheck str.[1..str.Length - 2]
+        |temp when (str.Length = 1||str.Length = 2) -> true
+        |_ -> false
 let check = palCheck input
-if check then
-    System.Console.WriteLine("palindrome")
+if palCheck input then
+    printfn "palindrome"
  else
-     System.Console.WriteLine("no")
+    printfn "no"
 
 
 

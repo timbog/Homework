@@ -1,11 +1,8 @@
-﻿// Дополнительные сведения о F# см. на http://fsharp.net
-// Дополнительную справку см. в проекте "Учебник по F#".
-let rec fac n =
+﻿let rec factorial n = //factorial counting
     if n < 2 then 1
-    else n * fac(n - 1)
-[<EntryPoint>]
-let main argv = 
-    printfn "%A" argv
-    let x = System.Int32.Parse(System.Console.ReadLine());
-    System.Console.WriteLine(fac x);
-    0 // возвращение целочисленного кода выхода
+    else n * factorial(n - 1)
+
+let x = int (System.Console.ReadLine())
+let result = factorial x
+printfn "Result is :%A" result
+

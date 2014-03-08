@@ -1,15 +1,21 @@
-﻿System.Console.WriteLine("Press x to stop adding values to list")
-let rec buildList list =
+﻿printfn "Press x to stop adding values to list"
+let rec buildList list = //function which builds list
     let input = System.Console.ReadLine()
     match input with
         | "x" -> list
-        | _ -> buildList (list @ [System.Int32.Parse(input)])
+        | _ -> buildList (int (input) :: list)
+
 let list = buildList []
-System.Console.WriteLine("Enter number to find: ")
-let number = System.Int32.Parse(System.Console.ReadLine())
-let rec findFunction iterator=
-    match (list.Item(iterator) = number) with
-    | true -> iterator
-    | false -> findFunction (iterator + 1)
-let output = findFunction 0;
+printfn "Enter number to find: "
+let number = int (System.Console.ReadLine())
+
+let rec find = //function which finds an element in list
+    let rec findFunction iterator=
+        match (list.Item(iterator) = number) with
+        | true -> iterator
+        | false when iterator < list.Length - 1-> findFunction (iterator + 1)
+        | false -> failwith "Number was not found."
+    list.Length - findFunction 0
+
+let output = find
 printfn "Result is :%A" output
