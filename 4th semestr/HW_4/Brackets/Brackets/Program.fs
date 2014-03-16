@@ -10,7 +10,10 @@ let ifCorrect = //function which returns if sequence is correct
         | '}' when list.Head = '{' && (list.Length = 1) && iterator = input.Length - 1 -> true
         | ']' when list.Head = '[' && (list.Length = 1) && iterator = input.Length - 1 -> true
         | ')' when list.Head = '(' && (list.Length = 1) && iterator = input.Length - 1 -> true
-        | _-> false
+        | '{' | '(' | '[' |'}' | ')' | ']' -> false
+        | _ when iterator <> input.Length - 1 -> correctBracket list (iterator + 1)
+        | _ when iterator = input.Length - 1 && list.Length = 0 -> true
+        |_ -> false
     correctBracket [] 0
 printfn "Result is: %A" ifCorrect
      
