@@ -1,9 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Palindrome", "Palindrome\Palindrome.fsproj", "{4762B77C-AAC2-494D-9FC3-4DBD142ADB9B}"
+# Visual Studio 2012
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Palindrome", "Palindrome\Palindrome.fsproj", "{3F016B0C-E2E3-4BF9-B14D-FC32665D411C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4762B77C-AAC2-494D-9FC3-4DBD142ADB9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4762B77C-AAC2-494D-9FC3-4DBD142ADB9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4762B77C-AAC2-494D-9FC3-4DBD142ADB9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4762B77C-AAC2-494D-9FC3-4DBD142ADB9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F016B0C-E2E3-4BF9-B14D-FC32665D411C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F016B0C-E2E3-4BF9-B14D-FC32665D411C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F016B0C-E2E3-4BF9-B14D-FC32665D411C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F016B0C-E2E3-4BF9-B14D-FC32665D411C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

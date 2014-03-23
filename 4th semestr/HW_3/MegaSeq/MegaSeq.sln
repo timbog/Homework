@@ -1,9 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MegaSeq", "MegaSeq\MegaSeq.fsproj", "{ED7A10A3-2DC2-4390-BF77-F206953B692E}"
+# Visual Studio 2012
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MegaSeq", "MegaSeq\MegaSeq.fsproj", "{B4A30E6E-F6DE-4873-A62D-C49866913450}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ED7A10A3-2DC2-4390-BF77-F206953B692E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED7A10A3-2DC2-4390-BF77-F206953B692E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED7A10A3-2DC2-4390-BF77-F206953B692E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED7A10A3-2DC2-4390-BF77-F206953B692E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4A30E6E-F6DE-4873-A62D-C49866913450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4A30E6E-F6DE-4873-A62D-C49866913450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4A30E6E-F6DE-4873-A62D-C49866913450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4A30E6E-F6DE-4873-A62D-C49866913450}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

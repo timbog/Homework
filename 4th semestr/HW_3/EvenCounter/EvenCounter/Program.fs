@@ -11,7 +11,7 @@ let newList1 = List.filter (fun x -> x % 2 = 0) list //with using filter
 printfn "Result is :%A" newList1.Length
 
 let newList2  = List.fold(fun acc x -> acc + ((x + 1) % 2)) 0 list // with using fold
-printfn "Result is :%A" newList1.Length
+printfn "Result is :%A" newList2.Length
 
 let tempList = List.map (fun x ->
                           match x % 2 with
