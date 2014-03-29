@@ -4,7 +4,7 @@ type TelephoneBook (nameList:List<string>, telList:List<int>) =
     member t.add(name, tel) = TelephoneBook(name::nameList, tel::telList)
     member t.findName(tel) =
         let equalCheck temp = (temp = tel)
-        nameList.Item(List.findIndex (equalCheck) nameList)
+        List.findIndex (equalCheck) nameList
     member t.findTel(name) =
         let equalCheck temp = (temp = name)
         nameList.Item(List.findIndex (equalCheck) telList)
@@ -14,7 +14,11 @@ type TelephoneBook (nameList:List<string>, telList:List<int>) =
         writer.Write telList
 
 let telBook = new TelephoneBook([], [])
-telBook.add("huisas", 52)
+let bk = telBook.add("huisas", 52)
+let temp = bk.Write
+
+
+let x = System.IO.File.Create("d:\Users\Boss\Documents\GitHub\Homework\4th semestr\HW_4\Telephone")
     (*member t.Read() =
         let str  = File.ReadLines("input.txt")
         let build str1 numflag =
