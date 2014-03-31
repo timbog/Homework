@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Telephone", "Telephone\Telephone.fsproj", "{71BCC3FC-07D1-49B3-A7F3-9F7D19154CB0}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TelDirectory", "TelDirectory\TelDirectory.fsproj", "{24A8DFBB-EEC2-4D17-867B-840841FD0982}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{71BCC3FC-07D1-49B3-A7F3-9F7D19154CB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71BCC3FC-07D1-49B3-A7F3-9F7D19154CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71BCC3FC-07D1-49B3-A7F3-9F7D19154CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71BCC3FC-07D1-49B3-A7F3-9F7D19154CB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24A8DFBB-EEC2-4D17-867B-840841FD0982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24A8DFBB-EEC2-4D17-867B-840841FD0982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24A8DFBB-EEC2-4D17-867B-840841FD0982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24A8DFBB-EEC2-4D17-867B-840841FD0982}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
