@@ -5,3 +5,5 @@ let func1 x: (int) list -> (int) list = List.map (fun y -> y * x)
 let func2 x: (int) list -> (int) list = List.map (fun y -> (*) y x)
 
 let func3 x: (int) list -> (int) list = List.map ((*) x)
+
+let func4:  (int) list-> (int) list = List.map((*) )
