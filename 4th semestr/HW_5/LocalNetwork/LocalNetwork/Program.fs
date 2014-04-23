@@ -1,22 +1,25 @@
 ﻿type Network() = 
-    let LinkMatrix = Array2D.init 3 3 (fun i j -> (i + j + 1) % 2)
+    let LinkMatrix = Array2D.init 3 3 (fun i j -> (i + j) % 2)
     let SystemMatrix = [|"Windows"; "MacOS"; "Linux"|]
-    let VirusMatrix = Array.init 3 (fun i -> (i + 2 % 2) = 1)
+    let VirusMatrix = Array.init (LinkMatrix.GetLength(0)) (fun i -> (i % 2) = 1)
     member n.OneMove() =
         let newInfection = Array.init (LinkMatrix.GetLength(0)) (fun x -> false)
-        for i in 0..LinkMatrix.GetLength(0) do           
-            for j in 0..LinkMatrix.GetLength(0) do
-                if ((LinkMatrix.[i, j] = 1) && (VirusMatrix.[j])) && not ((VirusMatrix.[i]) && not (newInfection.[i])) then
+        for i in 0..LinkMatrix.GetLength(0) - 1 do           
+            for j in 0..LinkMatrix.GetLength(0) - 1 do
+                if ((LinkMatrix.[i, j] = 1) && (VirusMatrix.[j])) && not ((VirusMatrix.[i]) && not (newInfection.[j])) then
                     let random = (new System.Random()).Next(0, 1000)
                     match SystemMatrix.[i] with
                     |"Windows" -> match ((random % 5 = 1) || (random % 5 = 0)) with
                                   |true-> VirusMatrix.[i] <- true
+                                          newInfection.[i] <- true
                                   |false->VirusMatrix.[i] <- false
                     |"Linux" -> match (random % 5 = 3) with
                                   |true-> VirusMatrix.[i] <- true
+                                          newInfection.[i] <- true
                                   |false -> VirusMatrix.[i] <- false
                     |"MacOS" -> match ((random % 5 = 1) || (random % 5 = 0) || (random % 5 = 3)) with
                                   |true-> VirusMatrix.[i] <- true
+                                          newInfection.[i] <- true
                                   |false -> VirusMatrix.[i] <- false
                     |_-> failwith "No such system"
                     if (VirusMatrix.[i]) then
@@ -42,19 +45,19 @@ let rec State()=
                 match (iterator < network.DisMatrix.Length) with
                     |true ->
                              let state = (network .DisMatrix.[iterator].ToString())
-                             printfn "%A" (network.OsMatrix.[iterator] + state)
+                             printfn "%s" (network.OsMatrix.[iterator] + "-" + state)
+                             let x = network.GetState()
                              printRes (iterator + 1)
-                    |false -> printfn "%A" ""
+                    |false -> printfn "%s" "------"
             printRes 0
 
 let rec work() =
     match network.AllInfected() with
         |true-> printfn "All computers are infected"
-        |false-> 
-            let x = network.GetState
-            State()
-            Thread.Sleep(5000);
-            work()
+        |false->
+            let z = Async.Sleep(500)
+            let y = State()
+            work()            
 let temp = work()
 
                         
