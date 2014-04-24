@@ -1,45 +1,38 @@
-﻿printfn "Enter expression"
-let input = System.Console.ReadLine()
-let countExpression() =
-    let rec count iter (result:string) = 
-        match (iter < input.Length) with
-            |true when (input.Length <> 1)-> match input.[iter] with
-                        |'+' | '-' | '*' | '/' -> count (iter + 1) (result + input.[iter].ToString())
-                        |'x' -> count (iter + 1) (result + "1")
-                        |_-> match (iter = 0) with
-                                |true-> match input.[iter + 1] with
-                                            |'*' | '/' -> count (iter + 1) (result + input.[iter].ToString())
-                                            |_-> count (iter + 1) (result + "0")
-                                |false-> match iter = (input.Length - 1) with               
-                                            |true -> match input.[iter - 1] with
-                                                        |'*' | '/' -> count (iter + 1) (result + input.[iter].ToString())
-                                                        |_-> count (iter + 1) (result + "0")
-                                            |false-> match input.[iter - 1] with
-                                                        |'*' | '/' -> count (iter + 1) (result + input.[iter].ToString())
-                                                        |_ -> match input.[iter + 1] with
-                                                                |'*' | '/' -> count (iter + 1) (result + input.[iter].ToString())
-                                                                |_-> count (iter + 1) (result + "0")
-            |true when (input.Length = 1) -> input
-            |_ -> result
-    count 0 ""
+﻿type Expression =
+    | Value of int
+    | Sum of Expression * Expression
+    | Multiplication of Expression * Expression
+    | X
 
-let rec simplify (str:string) iter (result:string)=
-        match (iter < str.Length) with
-            |true-> match str.[iter] with
-                        |'+' | '-' -> match str.[iter + 1] with
-                                        |'0' -> simplify str (iter + 2) result
-                                        |_-> simplify str (iter + 2) (result + str.[iter].ToString())
-                        |'*'  -> simplify str (iter + 2) (result + (int(str.[iter - 1].ToString()) * int(str.[iter + 1].ToString())).ToString())
-                        |'/'  -> simplify str (iter + 2) (result + (int(str.[iter - 1].ToString()) / int(str.[iter + 1].ToString())).ToString())
-                        |_ ->  match (iter = str.Length - 1) with
-                                 |true -> (result + str.[iter].ToString())
-                                 |false -> match str.[iter + 1] with
-                                            |'+' | '-' -> simplify str (iter + 1) (result + str.[iter].ToString())
-                                            |_ -> simplify str (iter + 1) result
-            |false -> result                             
-printfn "Result is: "           
-let x = countExpression()
-printfn "%A" x
-let z = simplify x 0 ""
-printfn "%A" z
-let y = System.Console.ReadKey()                                      
+let rec differentiate (expression:Expression) =
+    match expression with
+        |Expression.Value(temp) -> Expression.Value(0)
+        |Expression.Sum(temp1, temp2) -> Expression.Sum((differentiate temp1), (differentiate temp2))
+        |Expression.X -> Expression.Value(1)
+        |Expression.Multiplication(temp1, temp2) -> Expression.Sum(Expression.Multiplication(temp1, differentiate(temp2)), Expression.Multiplication(temp2, differentiate(temp1)))
+
+let rec simplify (expression:Expression) =
+    match expression with
+        |Expression.Sum(Expression.Value(0) ,temp1) | Expression.Sum(temp1 ,Expression.Value(0)) -> temp1
+        |Expression.Multiplication(Expression.Value(1) ,temp1) | Expression.Multiplication(temp1 ,Expression.Value(1)) -> temp1
+        |Expression.Multiplication(Expression.Value(0) ,temp1) | Expression.Multiplication(temp1 ,Expression.Value(0)) -> Expression.Value(0)
+        |Expression.Sum(temp1, temp2) -> Expression.Sum(simplify temp1, simplify temp2)
+        |Expression.Multiplication(temp1, temp2) -> Expression.Multiplication(simplify temp1, simplify temp2)
+        |temp -> temp
+let rec print (expression:Expression) =
+    match expression with
+        |Expression.Value(temp) -> printfn "%A" temp
+        |Expression.Sum(temp1, temp2) -> 
+                                        print temp1
+                                        printfn"%s" "+"
+                                        print temp2
+        |Expression.X -> printfn "%s" "x"
+        |Expression.Multiplication(temp1, temp2) -> 
+                                        print temp1
+                                        printfn"%s" "*"
+                                        print temp2
+
+let exp = Expression.Sum(Expression.Multiplication(Expression.X, Expression.Value(2)), Expression.Value(3))
+let x = differentiate exp
+let y = simplify exp
+let z = print y
