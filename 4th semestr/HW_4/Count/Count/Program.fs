@@ -19,6 +19,7 @@ let rec simplify (expression:Expression) =
         |Expression.Sum(temp1, temp2) -> Expression.Sum(simplify temp1, simplify temp2)
         |Expression.Multiplication(temp1, temp2) -> Expression.Multiplication(simplify temp1, simplify temp2)
         |temp -> temp
+
 let rec print (expression:Expression) =
     match expression with
         |Expression.Value(temp) -> printfn "%A" temp

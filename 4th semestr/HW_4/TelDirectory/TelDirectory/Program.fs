@@ -11,7 +11,7 @@ let readFromFile =
             let fileChecker() =         
                 match (File.Exists("input.txt")) with
                     |false -> failwith "No such file"                                           
-                    |true -> null
+                    |true -> ()
             let temp = fileChecker()
             let strArray = File.ReadAllLines("input.txt")
             let rec buildTelBook list1 list2 iter =
@@ -25,8 +25,8 @@ let readFromFile =
                         
 let rec tel (telList:List<int>) (nameList:List<string>) = //telephone function
     match (System.Console.ReadLine())  with
-        |temp when temp = "0" -> printfn "Thanks for using, good luck"
-        |temp when temp = "1" -> 
+        |"0" -> printfn "Thanks for using, good luck"
+        |"1" -> 
             printfn "Enter name"
             let name = System.Console.ReadLine()
             printfn "Enter telephone number"
@@ -37,30 +37,22 @@ let rec tel (telList:List<int>) (nameList:List<string>) = //telephone function
             printfn "Enter name: "
             let name = System.Console.ReadLine()
             let equalCheck temp = (temp = name)
-            let numX =
-                try
-                    (List.findIndex (equalCheck) nameList)
-                with
-                    | :?  System.Collections.Generic.KeyNotFoundException -> 
-                                                                                printfn "Doen't exist"
-                                                                                -1
-            if (numX <> -1) then
-                printfn "%A" (telList.Item(numX))
-            printfn "Press number of command"
+            let numX = List.tryFindIndex (equalCheck) nameList
+            if (numX <> None) then
+                printfn "%A" (telList.Item(numX.Value))
+            else
+                printfn "Doesn't exist" 
+            printfn "Press number of command"              
             tel (telList) (nameList)
         |temp when temp = "3" ->
             printfn "Enter telephone: "
             let telNumber = int (System.Console.ReadLine())
             let equalCheck temp = (temp = telNumber)
-            let nameX =
-                try
-                    List.findIndex (equalCheck) telList
-                with
-                    | :?  System.Collections.Generic.KeyNotFoundException ->
-                                                                              printfn "Doen't exist"
-                                                                              -1
-            if (nameX <> -1) then                                                                             
-                printfn "%A" (nameList.Item(nameX))
+            let nameX = List.tryFindIndex (equalCheck) telList
+            if (nameX <> None) then                                                                             
+                printfn "%A" (nameList.Item(nameX.Value))
+            else
+                printfn "Doesn't exist"
             printfn "Press number of command"
             tel (telList) (nameList)
         |temp when temp = "4" ->
