@@ -1,6 +1,25 @@
-﻿type Node<'a> = //tree itself
+﻿open System.Collections
+open System.Collections.Generic
+
+type Node<'a> = //tree itself
     | Node of 'a * Node<'a> * Node<'a>
     | Empty
+
+type Iterator<'a>(tree:Node<'a>) = //iterator
+    let rec makeList = function
+        | Empty -> []
+        | Node(a, l, r) -> makeList(l)@a::makeList(r)
+    let mutable list = makeList tree
+    let mutable current = -1
+    interface IEnumerator with
+        member i.MoveNext() =
+                    match (current + 1 < list.Length) with
+                        |true ->
+                                 current <- current + 1 
+                                 true
+                        |false -> false
+        member i.Current = box <|list.Item(current)
+        member i.Reset() = (current <- -1)
 
 type Tree() = //tree with value adding
     let mutable node = Node.Empty
@@ -12,42 +31,13 @@ type Tree() = //tree with value adding
             | Node(v, left, right) when value > v -> Node(v, left, insert value right)
             | Node(_, _, _) as n -> n
         node <- insert (value) (node)
-    member t.getNode() = node
+    interface IEnumerable with
+        member i.GetEnumerator() = new Iterator<'a>(node):> IEnumerator
 
-type Iterator(tree:Tree) = //iterator
-    let makeList = 
-        let rec build node treeList:List<Node<'a>>=
-            match node with
-                |Node(v, left, right) when (left = Empty) && (right = Empty) -> (node::treeList)
-                |Empty -> treeList
-                |Node(v, left, right) -> 
-                                         let temp = build left (treeList)
-                                         build right (temp @ node::treeList)
-        build (tree.getNode()) []
-    let mutable list = List.rev(makeList)
-    let mutable current = -1
-
-    member i.Next =
-                    match (current + 1 < list.Length) with
-                        |true ->
-                                 current <- current + 1 
-                                 list.Item(current)
-                        |false -> failwith("End of list")
-    member i.First = 
-                    current <- 0
-                    list.Item(0)
-    member i.getList = list        
-        
 let tr = new Tree()
+tr.Add(5)
 tr.Add(6)
 tr.Add(7)
-tr.Add(5)
-let it = new Iterator(tr) 
-printfn "%A" it.First
-printfn "%A" it.Next
-printfn "%A" it.Next
-
-                        
-
-
-
+tr.Add(8)
+for i in tr do
+    printfn "%A" i
