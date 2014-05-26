@@ -8,10 +8,10 @@ let sumOfArray = //sum of array
                 args.Result <- box res)
             threadArray.[i].RunWorkerCompleted.Add(fun args ->
                 result := !result +  unbox args.Result)
+        let mutable workArray = [| for i in 0 .. 99 -> threadArray.[i].IsBusy |]
         for i in 0..99 do
             threadArray.[i].RunWorkerAsync()
-        let mutable workArray = [| for i in 0 .. 99 -> threadArray.[i].IsBusy |]
-        printfn "%A" workArray
+            workArray <- [| for i in 0 .. 99 -> threadArray.[i].IsBusy |]                           
         while ((Array.tryFind (fun x -> x = true) workArray) <> None) do
             workArray <- [| for i in 0 .. 99 -> threadArray.[i].IsBusy |]                    
         result.Value
