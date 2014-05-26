@@ -2,6 +2,7 @@
     let linkMatrix = Array2D.init 3 3 (fun i j -> (i + j) % 2)
     let systemMatrix = [|"Windows"; "MacOS"; "Linux"|]
     let virusMatrix = Array.init (linkMatrix.GetLength(0)) (fun i -> (i % 2) = 1)
+    let rand = new System.Random()
     member n.OneMove() = //one move of infection
         let newInfection = Array.init (linkMatrix.GetLength(0)) (fun x -> false)
         let infect value iterator =
@@ -12,7 +13,7 @@
         for i in 0..linkMatrix.GetLength(0) - 1 do           
             for j in 0..linkMatrix.GetLength(0) - 1 do
                 if ((linkMatrix.[i, j] = 1) && (virusMatrix.[j])) && not ((virusMatrix.[i]) && not (newInfection.[j])) then
-                    let random = (new System.Random()).Next(0, 1000)
+                    let random = rand.Next(0, 1000)
                     match systemMatrix.[i] with
                     |"Windows" -> infect ((random % 5 = 1) || (random % 5 = 0)) i
                     |"Linux" -> infect (random % 5 = 3) i
@@ -20,7 +21,6 @@
                     |_-> failwith "No such system"
                     if (virusMatrix.[i]) then
                         newInfection.[i] <- true
-
     member n.AllInfected() = Array.forall (fun x -> (x = true)) (virusMatrix)
     member n.ConnectionMatrix = linkMatrix
     member n.OsMatrix = systemMatrix
